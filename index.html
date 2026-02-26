@@ -2,40 +2,41 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>EMRAT - Environmental Metabolic Risk Assessment Tool</title>
+    <title>My Preventive Tool</title>
 </head>
 
-<body style="font-family: Arial; margin: 40px; line-height: 1.6;">
+<body>
 
-    <h1>Environmental Metabolic Risk Assessment Tool (EMRAT)</h1>
+    <h1>Environmental Metabolic Prevention Tool</h1>
 
-    <h2>Outil d’évaluation du risque métabolique environnemental</h2>
+    <button onclick="showSleep()">Sleep</button>
+    <button onclick="showStress()">Stress</button>
 
-    <p>
-    This platform provides a structured framework designed to help dietitians evaluate environmental factors influencing metabolic regulation and guide personalized preventive strategies.
-    </p>
+    <div id="sleep" style="display:none; margin-top:20px;">
+        <h2>Sleep Recommendations</h2>
+        <p>• Avoid late caffeine</p>
+        <p>• Light dinner</p>
+        <p>• Regular meal timing</p>
+    </div>
 
-    <p>
-    Cette plateforme propose un outil structuré permettant aux diététiciens d’évaluer les facteurs environnementaux influençant la régulation métabolique et d’orienter leurs interventions nutritionnelles dans une approche préventive individualisée.
-    </p>
+    <div id="stress" style="display:none; margin-top:20px;">
+        <h2>Stress Recommendations</h2>
+        <p>• Omega-3 intake</p>
+        <p>• Stable blood sugar</p>
+        <p>• Anti-inflammatory foods</p>
+    </div>
 
-    <hr>
+<script>
+function showSleep() {
+    document.getElementById("sleep").style.display = "block";
+    document.getElementById("stress").style.display = "none";
+}
 
-    <h3>Scientific Disclaimer</h3>
-    <p>
-    This assessment does not provide a medical diagnosis. It evaluates environmental exposure associated with metabolic stress and supports professional decision-making.
-    </p>
-
-    <p>
-    Cet outil ne constitue pas un dispositif de diagnostic médical. Il évalue l’exposition environnementale associée au stress métabolique.
-    </p>
-
-    <hr>
-
-    <h3>Status</h3>
-    <p>
-    The full structured assessment framework will be available soon.
-    </p>
+function showStress() {
+    document.getElementById("stress").style.display = "block";
+    document.getElementById("sleep").style.display = "none";
+}
+</script>
 
 </body>
-</html>
+</html
