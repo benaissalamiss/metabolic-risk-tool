@@ -2,41 +2,86 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>My Preventive Tool</title>
+    <title>Outil de Prévention Métabolique Environnementale</title>
 </head>
 
-<body>
+<body style="font-family: Arial; text-align:center; margin:40px;">
 
-    <h1>Environmental Metabolic Prevention Tool</h1>
+    <h1>Outil de Prévention Métabolique Environnementale</h1>
 
-    <button onclick="showSleep()">Sleep</button>
+    <p>
+        Cet outil propose des recommandations nutritionnelles ciblées
+        en fonction des facteurs environnementaux identifiés.
+        Il ne constitue pas un diagnostic médical.
+    </p>
+
+    <hr>
+
+    <h2>Sélectionnez le domaine concerné :</h2>
+
+    <button onclick="showSleep()">Sommeil</button>
     <button onclick="showStress()">Stress</button>
+    <button onclick="showNutrition()">Qualité alimentaire</button>
+    <button onclick="showActivity()">Activité physique</button>
 
-    <div id="sleep" style="display:none; margin-top:20px;">
-        <h2>Sleep Recommendations</h2>
-        <p>• Avoid late caffeine</p>
-        <p>• Light dinner</p>
-        <p>• Regular meal timing</p>
+    <div id="sleep" style="display:none; margin-top:30px;">
+        <h3>Recommandations Nutritionnelles – Sommeil</h3>
+        <p>• Éviter la caféine après 14h</p>
+        <p>• Dîner léger et 2-3h avant le coucher</p>
+        <p>• Stabiliser les horaires des repas</p>
+        <p>• Favoriser les sources naturelles de magnésium</p>
     </div>
 
-    <div id="stress" style="display:none; margin-top:20px;">
-        <h2>Stress Recommendations</h2>
-        <p>• Omega-3 intake</p>
-        <p>• Stable blood sugar</p>
-        <p>• Anti-inflammatory foods</p>
+    <div id="stress" style="display:none; margin-top:30px;">
+        <h3>Recommandations Nutritionnelles – Stress</h3>
+        <p>• Augmenter les apports en oméga-3</p>
+        <p>• Répartir les protéines sur la journée</p>
+        <p>• Limiter les pics glycémiques</p>
+        <p>• Favoriser une alimentation anti-inflammatoire</p>
+    </div>
+
+    <div id="nutrition" style="display:none; margin-top:30px;">
+        <h3>Recommandations – Qualité Alimentaire</h3>
+        <p>• Augmenter l’apport en fibres</p>
+        <p>• Réduire les aliments ultra-transformés</p>
+        <p>• Consommer au moins 5 portions de fruits et légumes</p>
+    </div>
+
+    <div id="activity" style="display:none; margin-top:30px;">
+        <h3>Recommandations – Activité Physique</h3>
+        <p>• Minimum 150 minutes d’activité modérée par semaine</p>
+        <p>• Réduire le temps passé assis</p>
+        <p>• Intégrer du mouvement quotidien</p>
     </div>
 
 <script>
-function showSleep() {
-    document.getElementById("sleep").style.display = "block";
+function hideAll() {
+    document.getElementById("sleep").style.display = "none";
     document.getElementById("stress").style.display = "none";
+    document.getElementById("nutrition").style.display = "none";
+    document.getElementById("activity").style.display = "none";
+}
+
+function showSleep() {
+    hideAll();
+    document.getElementById("sleep").style.display = "block";
 }
 
 function showStress() {
+    hideAll();
     document.getElementById("stress").style.display = "block";
-    document.getElementById("sleep").style.display = "none";
+}
+
+function showNutrition() {
+    hideAll();
+    document.getElementById("nutrition").style.display = "block";
+}
+
+function showActivity() {
+    hideAll();
+    document.getElementById("activity").style.display = "block";
 }
 </script>
 
 </body>
-</html
+</html>
